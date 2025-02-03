@@ -4,13 +4,15 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-    "router": "",
+		"router": "",
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"vue": "^3.5.13"
+		"ant-design-vue": "^4.0.7",
+		"vue": "^3.5.13",
+		"vue-router": "^4.2.5"
 	},
 	"devDependencies": {
 		"@vitejs/plugin-vue": "^5.2.1",
