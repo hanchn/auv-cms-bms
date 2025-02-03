@@ -8,7 +8,7 @@
   </Layout>
 </template>
 <script setup>
-import Layout from 'ant-design-vue/es/layout/index.vue';
+import Layout from '@/layout/index.vue';
 import { reactive } from 'vue'
 const state = reactive({})
 </script>
