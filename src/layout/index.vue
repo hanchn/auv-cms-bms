@@ -1,7 +1,7 @@
 <template>
-  <div>
-      <header></header>
-      <div>
+  <div class="layout">
+      <header>头部</header>
+      <div class="content">
         <nav>
           <a-menu
             v-model:openKeys="state.openKeys"
@@ -112,4 +112,16 @@ const state = reactive({
   ]
 });
 </script>
-<style scoped></style>
+<style scoped>
+header {
+  height: 240px;
+}
+
+main {
+  padding: 24px;
+}
+
+.layout .content {
+  display: flex;
+}
+</style>
