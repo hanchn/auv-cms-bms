@@ -26,7 +26,7 @@ import {
 } from '@ant-design/icons-vue';
 const state = reactive({
   theme: "dark",
-  selectedKeys: '1',
+  selectedKeys: ['1'],
   openKeys: 'sub1',
   changeTheme: (checked) => {
     theme.value = checked ? 'dark' : 'light';
