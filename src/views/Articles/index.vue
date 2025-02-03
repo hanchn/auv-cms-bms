@@ -1,4 +1,4 @@
-<template></template>
+<template>Articles</template>
 <script setup>
 import { reactive } from 'vue'
 const state = reactive({})
