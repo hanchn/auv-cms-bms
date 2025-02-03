@@ -1,19 +1,21 @@
 <template>
   <div>
-    <div>
-      <div></div>
+      <header></header>
       <div>
-      <a-menu
-        v-model:openKeys="state.openKeys"
-        v-model:selectedKeys="state.selectedKeys"
-        style="width: 256px"
-        mode="inline"
-        :theme="state.theme"
-        :items="state.items"
-      />
-    </div>
-    <div></div>
-</div>
+        <nav>
+          <a-menu
+            v-model:openKeys="state.openKeys"
+            v-model:selectedKeys="state.selectedKeys"
+            style="width: 256px"
+            mode="inline"
+            :theme="state.theme"
+            :items="state.items"
+          />
+        </nav>
+        <main>
+          <slot></slot>
+        </main>
+      </div>
   </div>
 </template>
 <script setup>
