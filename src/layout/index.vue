@@ -1,21 +1,22 @@
 <template>
   <div class="layout">
-      <header>头部</header>
+    <nav>
+      <div class="logo"></div>
+      <a-menu
+        v-model:openKeys="state.openKeys"
+        v-model:selectedKeys="state.selectedKeys"
+        style="width: 256px; height: 100%"
+        mode="inline"
+        :theme="state.theme"
+        :items="state.items"
+      />
+    </nav>
+    <main>
+      <header></header>
       <div class="content">
-        <nav>
-          <a-menu
-            v-model:openKeys="state.openKeys"
-            v-model:selectedKeys="state.selectedKeys"
-            style="width: 256px"
-            mode="inline"
-            :theme="state.theme"
-            :items="state.items"
-          />
-        </nav>
-        <main>
-          <slot></slot>
-        </main>
+        <slot></slot>
       </div>
+    </main>
   </div>
 </template>
 <script setup>
@@ -113,15 +114,35 @@ const state = reactive({
 });
 </script>
 <style scoped>
+.logo {
+  height: 80px;
+  background: #001529;
+}
+
 header {
-  height: 240px;
+  height: 60px;
+  background: #ffffff;
 }
 
 main {
-  padding: 24px;
+  width: calc(100% - 256px);
+  overflow-y: scroll;
+}
+
+nav {
+  width: 256px;
+  height: calc(100vh);
+  overflow-y: scroll;
+}
+
+.layout {
+  display: flex;
+  background: #eff2f5;
 }
 
 .layout .content {
-  display: flex;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow: scroll;
 }
 </style>
