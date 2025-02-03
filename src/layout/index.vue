@@ -27,10 +27,14 @@ import {
   AppstoreOutlined,
   SettingOutlined,
 } from '@ant-design/icons-vue';
+import { useRouter } from "vue-router"
+const router = useRouter()
+console.log('router ', router);
 const state = reactive({
   theme: "dark",
   selectedKeys: ['1'],
   openKeys: 'sub1',
+  routes: [],
   changeTheme: (checked) => {
     theme.value = checked ? 'dark' : 'light';
   },
