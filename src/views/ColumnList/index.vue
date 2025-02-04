@@ -13,7 +13,13 @@ import Table from './components/Table.vue'
 const state = reactive({
   modalTitle: '编辑',
   open: false,
-  handleOk: () => {},
+  modalState: {},
+  handleOk: () => { },
+  dealModal: (open = false, isEdit = false, record = {}) => {
+    state.modalTitle = isEdit ? '编辑' : '新增'
+    state.open = open
+    state.modalState = {...record}
+   },
   formFilds: [],
   formRef: {},
   expand: false,
