@@ -15,7 +15,7 @@
               :label="`field-${i}`"
               :rules="[{ required: true, message: 'input something' }]"
             >
-              <a-input v-model:value="formState[`field-${i}`]" placeholder="placeholder"></a-input>
+              <a-input v-model:value="state.formState[`field-${i}`]" placeholder="placeholder"></a-input>
             </a-form-item>
           </a-col>
         </template>
@@ -36,7 +36,6 @@
         </a-col>
       </a-row>
     </a-form>
-    <div class="search-result-list">Search Result List</div>
   </div>
 </template>
 <script setup>

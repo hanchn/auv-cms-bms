@@ -4,19 +4,14 @@ import { getQueryString } from 'cupshe-utils';
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [{
-    name: "ArticleList",
-    path: "/ArticleList",
-    component: () => import("@/views/ArticleList/index.vue"),
-    children: []
-  }, {
-    name: "ArticleList copy",
-    path: "/ArticleList copy",
-    component: () => import("@/views/ArticleList copy/index.vue"),
-    children: []
-  }, {
     name: "Articles",
     path: "/Articles",
     component: () => import("@/views/Articles/index.vue"),
+    children: []
+  }, {
+    name: "ColumnList",
+    path: "/ColumnList",
+    component: () => import("@/views/ColumnList/index.vue"),
     children: []
   }, {
     name: "Home",
@@ -27,6 +22,16 @@ const router = createRouter({
     name: "Templates",
     path: "/Templates",
     component: () => import("@/views/Templates/index.vue"),
+    children: []
+  }, {
+    name: "UserList",
+    path: "/UserList",
+    component: () => import("@/views/UserList/index.vue"),
+    children: []
+  }, {
+    name: "UserManage",
+    path: "/UserManage",
+    component: () => import("@/views/UserManage/index.vue"),
     children: []
   }]
 });
