@@ -11,10 +11,23 @@ import Filter from './components/Filter.vue'
 import Table from './components/Table.vue'
 const state = reactive({
   formFilds: [{
-    name: '',
-    label: '',
-    placeholder: '',
+    name: 'title',
+    label: '标题',
+    placeholder: '请输入...',
     options: [],
+    fildType: 'input',
+  },{
+    name: 'author',
+    label: '作者',
+    placeholder: '请输入...',
+    options: [],
+    fildType: 'input',
+  },{
+    name: 'date',
+    label: '日期',
+    placeholder: '请输入...',
+    options: [],
+    fildType: 'input',
   }],
   formRef: {},
   expand: false,
