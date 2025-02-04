@@ -11,9 +11,6 @@ import { reactive, provide } from 'vue'
 import Filter from './components/Filter.vue'
 import Table from './components/Table.vue'
 const state = reactive({
-  modalTitle: '编辑',
-  open: false,
-  handleOk: () => {},
   formFilds: [],
   formRef: {},
   expand: false,

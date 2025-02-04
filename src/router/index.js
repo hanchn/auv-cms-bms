@@ -14,6 +14,11 @@ const router = createRouter({
     component: () => import("@/views/ColumnList/index.vue"),
     children: []
   }, {
+    name: "ColumnList copy",
+    path: "/ColumnList copy",
+    component: () => import("@/views/ColumnList copy/index.vue"),
+    children: []
+  }, {
     name: "Home",
     path: "/Home",
     component: () => import("@/views/Home/index.vue"),
