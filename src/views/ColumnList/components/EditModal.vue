@@ -1,5 +1,5 @@
 <template>
-  <a-modal v-model:open="open" :title="state.modalTitle" @ok="handleOk">
+  <a-modal v-model:open="state.editModalOpen" :title="state.editModalTitle" @ok="state.editModalHandle">
     <p>Some contents...</p>
     <p>Some contents...</p>
     <p>Some contents...</p>
