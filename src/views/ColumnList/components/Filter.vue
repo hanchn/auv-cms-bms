@@ -1,6 +1,5 @@
 <template>
   <div>
-    111{{ state.formRef }}
     <a-form
       ref="formRef"
       name="advanced_search"
@@ -14,7 +13,6 @@
             <a-form-item
               :name="`field-${i}`"
               :label="`field-${i}`"
-              :rules="[{ required: true, message: 'input something' }]"
             >
               <a-input v-model:value="state.formState[`field-${i}`]" placeholder="placeholder"></a-input>
             </a-form-item>
