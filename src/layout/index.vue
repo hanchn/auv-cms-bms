@@ -178,6 +178,5 @@ nav.menu {
   width: 100%;
   height: calc(100% - 40px);
   overflow-y: scroll;
-  background: #f8f8f8;
 }
 </style>
