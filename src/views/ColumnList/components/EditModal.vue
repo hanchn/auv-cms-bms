@@ -6,5 +6,7 @@
   </a-modal>
 </template>
 <script setup>
+import { inject } from 'vue';
+const state = inject('initSate')
 </script>
 <style scoped></style>
