@@ -7,7 +7,7 @@ export const initData = {
     fildType: 'input',
   },{
     name: 'author',
-    label: '作者',
+    label: '创建人',
     placeholder: '请输入...',
     options: [],
     fildType: 'input',
@@ -19,16 +19,17 @@ export const initData = {
     fildType: 'input',
     }],
   columns: [
-    //{ title: 'ID', width: 100, dataIndex: 'id', key: 'id', fixed: 'left' },
+    { title: '排序', width: 40, dataIndex: 'sort', key: 'sort', fixed: 'left' },
     { title: '标题', width: 100, dataIndex: 'title', key: 'title', fixed: 'left', align: 'center' },
     { title: '描述', dataIndex: 'desc', key: '1', width: 150 },
     { title: '启用状态', dataIndex: 'status', key: '2', width: 150 },
+    { title: '创建人', dataIndex: 'date', key: '3', width: 150 },
     { title: '创建日期', dataIndex: 'date', key: '3', width: 150 },
     {
       title: '操作',
       key: 'operation',
       fixed: 'right',
-      width: 100,
+      width: 150,
       align: 'center'
     },],
   dataSource: [],
