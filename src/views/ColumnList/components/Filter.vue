@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-form
-      ref="formRef"
+      :ref="state.formRef"
       name="advanced_search"
       class="ant-advanced-search-form"
       :model="formState"
@@ -23,7 +23,7 @@
       <a-row>
         <a-col :span="24" style="text-align: right">
           <a-button type="primary" html-type="submit">Search</a-button>
-          <a-button style="margin: 0 8px" @click="() => formRef.resetFields()">Clear</a-button>
+          <a-button style="margin: 0 8px" @click="() => state.formRef.resetFields()">Clear</a-button>
           <a style="font-size: 12px" @click="() => state.expandSet()">
             <template v-if="expand">
               <UpOutlined />
