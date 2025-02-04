@@ -1,7 +1,8 @@
 <template>
   <div>
+    111{{ state.formRef }}
     <a-form
-      :ref="state.formRef"
+      ref="formRef"
       name="advanced_search"
       class="ant-advanced-search-form"
       :model="formState"
