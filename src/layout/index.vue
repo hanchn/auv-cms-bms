@@ -171,7 +171,7 @@ nav.menu {
 }
 
 .layout .content .breadcrumb{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .layout .content .content-wrap{
