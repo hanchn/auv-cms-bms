@@ -3,6 +3,7 @@
   <div>
     <Filter/>
     <Table/>
+    <EditModal/>
   </div>
 </template>
 <script setup>
@@ -10,6 +11,7 @@ import { initData } from './const.js'
 import { reactive, provide } from 'vue'
 import Filter from './components/Filter.vue'
 import Table from './components/Table.vue'
+import EditModal from './components/EditModal.vue'
 const state = reactive({
   modalTitle: '编辑',
   open: false,
