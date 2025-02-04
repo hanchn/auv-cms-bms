@@ -8,13 +8,13 @@
       @finish="onFinish"
     >
       <a-row :gutter="24">
-        <template v-for="i in 10" :key="i">
-          <a-col v-show="expand || i <= 6" :span="8">
+        <template v-for="(item, key) in state.formFilds" :key="key">
+          <a-col v-show="state.expand || key <= 6" :span="8">
             <a-form-item
-              :name="`field-${i}`"
-              :label="`field-${i}`"
+              :name="item.name"
+              :label="item.label"
             >
-              <a-input v-model:value="state.formState[`field-${i}`]" placeholder="placeholder"></a-input>
+              <a-input v-model:value="state.formState[`${item.name}`]" :placeholder="item.placeholder"></a-input>
             </a-form-item>
           </a-col>
         </template>
@@ -23,7 +23,7 @@
         <a-col :span="24" style="text-align: right">
           <a-button type="primary" html-type="submit">Search</a-button>
           <a-button style="margin: 0 8px" @click="() => state.formRef.resetFields()">Clear</a-button>
-          <a style="font-size: 12px" @click="() => state.expandSet()">
+          <a style="font-size: 12px" @click="() => state.expandSet()" v-if="state.formFilds.length > 7">
             <template v-if="expand">
               <UpOutlined />
             </template>
