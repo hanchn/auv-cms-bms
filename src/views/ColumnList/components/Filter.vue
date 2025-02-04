@@ -21,9 +21,10 @@
       </a-row>
       <a-row>
         <a-col :span="24" style="text-align: right">
-          <a-button type="primary" html-type="submit">搜索</a-button>
-          <a-button style="margin: 0 8px" @click="() => state.formRef.resetFields()">清除</a-button>
-          <a style="font-size: 12px" @click="() => state.expandSet()" v-if="state.formFilds.length > 7">
+          <a-button type="primary" class="mr8">新建菜单</a-button>
+          <a-button type="primary" class="mr8" html-type="submit">搜索</a-button>
+          <a-button @click="() => state.formRef.resetFields()">清除</a-button>
+          <a class="fs12" @click="() => state.expandSet()" v-if="state.formFilds.length > 7">
             <template v-if="expand">
               <UpOutlined />
             </template>
