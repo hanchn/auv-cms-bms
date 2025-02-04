@@ -4,6 +4,16 @@ import { getQueryString } from 'cupshe-utils';
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [{
+    name: "ArticleList",
+    path: "/ArticleList",
+    component: () => import("@/views/ArticleList/index.vue"),
+    children: []
+  }, {
+    name: "ArticleList copy",
+    path: "/ArticleList copy",
+    component: () => import("@/views/ArticleList copy/index.vue"),
+    children: []
+  }, {
     name: "Articles",
     path: "/Articles",
     component: () => import("@/views/Articles/index.vue"),
