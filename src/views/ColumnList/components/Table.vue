@@ -1,5 +1,5 @@
 <template>
-  <a-table :columns="state.columns" :data-source="state.dataSource" :scroll="{ x: 1500, y: 300 }">
+  <a-table :columns="state.columns" :data-source="state.dataSource" :scroll="{ x: 1500, y: 300 }" :pagination="false">
     <template #bodyCell="{ column }">
       <template v-if="column.key === 'operation'">
         <a-button type="link">编辑</a-button>
@@ -8,6 +8,13 @@
       </template>
     </template>
   </a-table>
+  <a-pagination
+      class="pagination"
+      v-model:current="state.pagination.current"
+      v-model:page-size="state.pagination.pageSize"
+      :total="state.pagination.total"
+      :show-total="total => `总计 ${total} 条数据`"
+    />
 </template>
 <script setup>
 import { inject } from 'vue'

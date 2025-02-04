@@ -31,7 +31,12 @@ export const initData = {
       width: 100,
       align: 'center'
     },],
-    dataSource: []
+  dataSource: [],
+  pagination: {
+    total: 100,
+    pageSize: 10,
+    current: 1,
+  },
 }
 
 let data = []
@@ -43,5 +48,5 @@ let data = []
       address: `London Park no. ${i}`,
     });
   }
-  staticData.dataSource = data
+  initData.dataSource = data
   

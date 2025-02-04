@@ -5,3 +5,9 @@
 .mb20 {
   margin-bottom: 20px;
 }
+
+.pagination {
+  display: flex;
+  padding-top: 30px;
+  justify-content: flex-end;
+}

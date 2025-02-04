@@ -7,7 +7,6 @@
 </template>
 <script setup>
 import { initData } from './const.js'
-console.log('static ', staticData)
 import { reactive, provide } from 'vue'
 import Filter from './components/Filter.vue'
 import Table from './components/Table.vue'
