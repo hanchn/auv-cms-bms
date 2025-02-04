@@ -3,6 +3,7 @@
     <template #bodyCell="{ column, record }">
       <template v-if="column.key === 'operation'">
         <a-button type="link" @click="() => dealModal(true, true, {...record})">编辑</a-button>
+        <a-button type="link">子菜单</a-button>
         <a-button type="link">删除</a-button>
       </template>
     </template>

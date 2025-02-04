@@ -4,9 +4,34 @@ import { getQueryString } from 'cupshe-utils';
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [{
-    name: "Articles",
-    path: "/Articles",
-    component: () => import("@/views/Articles/index.vue"),
+    name: "ActivityList",
+    path: "/ActivityList",
+    component: () => import("@/views/ActivityList/index.vue"),
+    children: []
+  }, {
+    name: "ActivityManage",
+    path: "/ActivityManage",
+    component: () => import("@/views/ActivityManage/index.vue"),
+    children: []
+  }, {
+    name: "ArticleList",
+    path: "/ArticleList",
+    component: () => import("@/views/ArticleList/index.vue"),
+    children: []
+  }, {
+    name: "ArticleManage",
+    path: "/ArticleManage",
+    component: () => import("@/views/ArticleManage/index.vue"),
+    children: []
+  }, {
+    name: "CollectionList",
+    path: "/CollectionList",
+    component: () => import("@/views/CollectionList/index.vue"),
+    children: []
+  }, {
+    name: "CollectionManage",
+    path: "/CollectionManage",
+    component: () => import("@/views/CollectionManage/index.vue"),
     children: []
   }, {
     name: "ColumnList",
@@ -14,19 +39,59 @@ const router = createRouter({
     component: () => import("@/views/ColumnList/index.vue"),
     children: []
   }, {
-    name: "MenuList",
-    path: "/MenuList",
-    component: () => import("@/views/MenuList/index.vue"),
-    children: []
-  }, {
     name: "Home",
     path: "/Home",
     component: () => import("@/views/Home/index.vue"),
     children: []
   }, {
-    name: "Templates",
-    path: "/Templates",
-    component: () => import("@/views/Templates/index.vue"),
+    name: "MaterialList",
+    path: "/MaterialList",
+    component: () => import("@/views/MaterialList/index.vue"),
+    children: []
+  }, {
+    name: "MaterialManage",
+    path: "/MaterialManage",
+    component: () => import("@/views/MaterialManage/index.vue"),
+    children: []
+  }, {
+    name: "MenuList",
+    path: "/MenuList",
+    component: () => import("@/views/MenuList/index.vue"),
+    children: []
+  }, {
+    name: "PointList",
+    path: "/PointList",
+    component: () => import("@/views/PointList/index.vue"),
+    children: []
+  }, {
+    name: "PointManage",
+    path: "/PointManage",
+    component: () => import("@/views/PointManage/index.vue"),
+    children: []
+  }, {
+    name: "ProductList",
+    path: "/ProductList",
+    component: () => import("@/views/ProductList/index.vue"),
+    children: []
+  }, {
+    name: "ProductManage",
+    path: "/ProductManage",
+    component: () => import("@/views/ProductManage/index.vue"),
+    children: []
+  }, {
+    name: "SiteConfig",
+    path: "/SiteConfig",
+    component: () => import("@/views/SiteConfig/index.vue"),
+    children: []
+  }, {
+    name: "TemplateList",
+    path: "/TemplateList",
+    component: () => import("@/views/TemplateList/index.vue"),
+    children: []
+  }, {
+    name: "TemplateManage",
+    path: "/TemplateManage",
+    component: () => import("@/views/TemplateManage/index.vue"),
     children: []
   }, {
     name: "UserList",
