@@ -1,20 +1,32 @@
 <template>
   <div class="layout">
-    <nav>
+    <nav class="menu">
       <div class="logo"></div>
-      <a-menu
-        v-model:openKeys="state.openKeys"
-        v-model:selectedKeys="state.selectedKeys"
-        style="width: 256px; height: 100%"
-        mode="inline"
-        :theme="state.theme"
-        :items="state.items"
-      />
+      <div class="menu-wrap">
+        <a-menu
+          v-model:openKeys="state.openKeys"
+          v-model:selectedKeys="state.selectedKeys"
+          style="width: 256px; height: 100%"
+          mode="inline"
+          :theme="state.theme"
+          :items="state.items"
+        />
+      </div>
     </nav>
     <main>
       <header></header>
       <div class="content">
-        <slot></slot>
+        <div class="breadcrumb">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item><a href="">Application Center</a></a-breadcrumb-item>
+            <a-breadcrumb-item><a href="">Application List</a></a-breadcrumb-item>
+            <a-breadcrumb-item>An Application</a-breadcrumb-item>
+          </a-breadcrumb>
+        </div>
+        <div class="content-wrap">
+          <slot></slot>
+        </div>
       </div>
     </main>
   </div>
@@ -120,23 +132,28 @@ const state = reactive({
 <style scoped>
 .logo {
   height: 80px;
-  background: #001529;
 }
 
 header {
   height: 60px;
   background: #ffffff;
+  box-shadow: 0 2px 8px #f0f1f2;
 }
 
 main {
   width: calc(100% - 256px);
-  overflow-y: scroll;
 }
 
-nav {
+.menu-wrap {
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+  padding-bottom: 20px;
+}
+
+nav.menu {
   width: 256px;
   height: calc(100vh);
-  overflow-y: scroll;
+  background: #001529;
 }
 
 .layout {
@@ -145,8 +162,22 @@ nav {
 }
 
 .layout .content {
-  padding: 20px;
-  height: calc(100vh - 60px);
-  overflow: scroll;
+  padding: 24px;
+  margin: 14px;
+  height: calc(100vh - 100px);
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.layout .content .breadcrumb{
+  margin-bottom: 20px;
+}
+
+.layout .content .content-wrap{
+  width: 100%;
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+  background: #f8f8f8;
 }
 </style>
